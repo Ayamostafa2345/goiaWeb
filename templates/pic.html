@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>upload image</title>
+       
+        <script src='main.js'></script>
+        <style>
+                img{
+                        height: 200px;
+                        width: 200px;
+                }
+        </style>
+</head>
+<body>
+        <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" multiple>
+                <button>upload</button>
+        </form>
+        <hr>
+        {%for img in image %}
+        <img src ='{{img.image.url}}'alt= 'Image'>
+        {% endfor%}
+</body>
+</html>
